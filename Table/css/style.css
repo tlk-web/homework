@@ -1,0 +1,21 @@
+table {
+	border-spacing: 0px;
+	border-collapse: collapse;
+	margin: 10px;
+	font-family: Arial, sans-serif;
+}
+
+td,
+th,
+caption {
+	border: 1px solid #000;
+}
+
+caption {
+	border-bottom: none;
+	font-weight: bold;
+}
+
+.weekend {
+	color: #f00;
+}

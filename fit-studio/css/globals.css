@@ -12,6 +12,7 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
+	min-width: 375px;
 	min-height: 100vh;
 }
 
@@ -27,6 +28,12 @@ p {
 
 a {
 	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
 }
 
 .container {
@@ -90,4 +97,53 @@ a {
 	letter-spacing: 0.04em;
 	text-transform: uppercase;
 	color: #858e8a;
+}
+
+.decor::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	width: calc(50% - 250px);
+	height: 48px;
+	background: url(../images/decor-icons.svg);
+}
+
+@media (width <= 992px) {
+	.container {
+		max-width: 768px;
+	}
+}
+
+@media (width <= 768px) {
+	.container {
+		max-width: 576px;
+	}
+
+	.title-large {
+		margin-bottom: 30px;
+		font-size: 40px;
+	}
+
+	.title-medium {
+		font-size: 22px;
+	}
+
+	.home-page .title-large {
+		min-width: inherit;
+		text-align: center;
+	}
+}
+
+@media (width <= 576px) {
+	.section {
+		margin-bottom: 80px;
+	}
+
+	.title-large {
+		font-size: 32px;
+	}
+
+	.title-medium {
+		font-size: 18px;
+	}
 }

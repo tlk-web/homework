@@ -32,7 +32,7 @@
 					</a>
 					<div class="header__phone text-sub">
 						<p class="header__phone-text">
-							Первое посещение бесплатно
+							Первое посещение беспылатно
 						</p>
 						<a class="header__phone-link" href="tel:+79282822882">
 							+7 (928) 282-28-82
@@ -42,22 +42,25 @@
 			</div>
 		</header>
 		<section class="hero section decor">
-			<div class="container hero__container">
+			<div class="hero__container container">
 				<div class="hero__info">
 					<h1 class="hero__title">
 						Подтянутое тело
 						<strong class="hero__title-accent"> за месяц </strong>
 						тренировок
 					</h1>
+					<!-- Не прописал БЭМ потому что нет универсального стиля -->
 					<p class="text">
 						Программа тренировки включает в себя разнообразные
 						упражнения, направленные на развитие силы и мышечного
 						тонуса.
 					</p>
+					<!-- Не прописал БЭМ потому что нет универсального стиля -->
 					<a class="button" href="#">Посмотреть программу</a>
 				</div>
 				<div class="hero__images">
-					<p class="hero__choose text">Выбери своего тренера</p>
+					<!-- Изменил название класса посчитал так более корректнее название hero-choose -->
+					<p class="hero__badge-text text">Выбери своего тренера</p>
 					<img
 						src="./images/girl.jpg"
 						width="347"
@@ -80,7 +83,7 @@
 					<article class="news__article">
 						<header class="news__header">
 							<img
-								class="news__article-img"
+								class="news__header-img"
 								src="./images/news/news-1.jpg"
 								width="284"
 								height="203"
@@ -88,12 +91,12 @@
 							/>
 							<div class="news__info">
 								<time
-									class="news__date text-sub"
+									class="news__info-date text-sub"
 									datetime="2024.04.19"
 								>
 									19.04.2024
 								</time>
-								<h3 class="news__text text">
+								<h3 class="news__info-text text">
 									Открытие нового филиала в центре города!
 								</h3>
 							</div>
@@ -107,7 +110,7 @@
 					<article class="news__article">
 						<header class="news__header">
 							<img
-								class="news__article-img"
+								class="news__header-img"
 								src="./images/news/news-2.jpg"
 								width="284"
 								height="203"
@@ -115,15 +118,15 @@
 							/>
 							<div class="news__info">
 								<time
-									class="news__date text-sub"
+									class="news__info-date text-sub"
 									datetime="2024.04.17"
 								>
 									17.04.2024
 								</time>
-								<h3 class="news__text text">
+								<h3 class="news__info-text text">
 									Запуск новой программы тренировок для
 									начинающих
-									<span class="news__test"
+									<span class="test"
 										>проверка проверка проверка проверка
 										проверка проверка проверка проверка
 										проверка проверка</span
@@ -131,7 +134,7 @@
 								</h3>
 							</div>
 						</header>
-						<footer class="news__footer">
+						<footer class="news_footer">
 							<a class="news__footer-link" href="article.html"
 								>Подробнее</a
 							>
@@ -140,7 +143,7 @@
 					<article class="news__article">
 						<header class="news__header">
 							<img
-								class="news__article-img"
+								class="news__header-img"
 								src="./images/news/news-3.jpg"
 								width="284"
 								height="203"
@@ -148,12 +151,12 @@
 							/>
 							<div class="news__info">
 								<time
-									class="news__date text-sub"
+									class="news__info-date text-sub"
 									datetime="2024.04.13"
 								>
 									13.04.2024
 								</time>
-								<h3 class="news__text text">
+								<h3 class="news__info-text text">
 									Специальное предложение для студентов и
 									школьников
 								</h3>
@@ -168,7 +171,7 @@
 					<article class="news__article">
 						<header class="news__header">
 							<img
-								class="news__article-img"
+								class="news__header-img"
 								src="./images/news/news-4.jpg"
 								width="284"
 								height="203"
@@ -176,12 +179,12 @@
 							/>
 							<div class="news__info">
 								<time
-									class="news__date text-sub"
+									class="news__info-date text-sub"
 									datetime="2024.04.08"
 								>
 									08.04.2024
 								</time>
-								<h3 class="news__text text">
+								<h3 class="news__info-text text">
 									Открыт конкурс на лучший фитнес-челлендж
 								</h3>
 							</div>
@@ -197,10 +200,10 @@
 		</section>
 		<section class="faq section decor">
 			<div class="container">
-				<h2 class="faq_title title-large">Вопросы и ответы</h2>
+				<h2 class="faq__title title-large">Вопросы и ответы</h2>
 				<div class="faq__container">
 					<img
-						class="faq__img"
+						class="faq__container-img"
 						src="./images/gym-girl.jpg"
 						width="492"
 						height="531"
@@ -286,11 +289,29 @@
 					</a>
 					<nav>
 						<ul class="footer__menu">
-							<li><a href="#">Клубы</a></li>
-							<li><a href="#">Тренировки</a></li>
-							<li><a href="#">Абонементы</a></li>
-							<li><a href="#">Программа лояльности</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li>
+								<a class="footer__menu-link" href="#">Клубы</a>
+							</li>
+							<li>
+								<a class="footer__menu-link" href="#"
+									>Тренировки</a
+								>
+							</li>
+							<li>
+								<a class="footer__menu-link" href="#"
+									>Абонементы</a
+								>
+							</li>
+							<li>
+								<a class="footer__menu-link" href="#"
+									>Программа лояльности</a
+								>
+							</li>
+							<li>
+								<a class="footer__menu-link" href="#"
+									>Контакты</a
+								>
+							</li>
 						</ul>
 					</nav>
 				</div>

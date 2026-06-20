@@ -7,7 +7,7 @@
 	font-size: 36px;
 }
 
-.article-text {
+.article__text {
 	margin-bottom: 20px;
 	font-weight: 400;
 	font-size: 16px;
@@ -15,7 +15,7 @@
 	color: #535755;
 }
 
-.article-text:last-child {
+.article__text:last-child {
 	margin-bottom: 0;
 }
 
@@ -41,16 +41,16 @@
 	bottom: 136px;
 }
 
-.article-list {
+.article__list {
 	margin-top: 0;
 	padding-left: 16px;
 }
 
-.article-item:not(:last-child) {
+.article__list-item:not(:last-child) {
 	margin-bottom: 12px;
 }
 
-.article-item::marker {
+.article__list-item::marker {
 	font-size: 22px;
 	color: #3596ed;
 }

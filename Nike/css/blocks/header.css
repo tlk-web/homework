@@ -3,6 +3,7 @@
 	top: 0;
 	right: 0;
 	left: 0;
+	z-index: var(--layer-1);
 	padding-block: 32px;
 	transition: box-shadow var(--transition-time);
 	background-color: var(--bg-color);
@@ -20,7 +21,7 @@
 
 @media (width > 768px) {
 	.header__logo {
-		/* min-width: 992px, max-width: 1440px  */
+		/* min-width 992px, max-width 1440px */
 		margin-right: clamp(25px, -11.585rem + 21.21vw, 120px);
 	}
 

@@ -3,14 +3,14 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/index.css" />
 		<link
 			rel="shortcut icon"
 			href="./icons/nike-favicon-48x48.ico"
 			type="image/x-icon"
 		/>
-		<link rel="stylesheet" href="./css/index.css" />
-		<script defer src="./js/index.js" type="module"></script>
-		<title>Nike</title>
+		<script src="./js/index.js" type="module"></script>
+		<title>Nike Air Mag</title>
 	</head>
 	<body class="page__body">
 		<header class="header">
@@ -21,7 +21,7 @@
 						src="./icons/logo-icon.svg"
 						width="50"
 						height="20"
-						alt="Логотип Nike белого цвета"
+						alt="Логотип Nike"
 					/>
 				</a>
 				<nav
@@ -31,22 +31,22 @@
 				>
 					<ul class="menu__list">
 						<li class="menu__item">
-							<a class="menu__link" href="#air-mag" lang="en">
-								Air Mag
-							</a>
+							<a class="menu__link" href="#air-mag" lang="en"
+								>Air Mag</a
+							>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#sizes"> Размеры </a>
+							<a class="menu__link" href="#sizes">Размеры</a>
 						</li>
 						<li class="menu__item">
-							<a class="menu__link" href="#characteristics">
-								Характеристики
-							</a>
+							<a class="menu__link" href="#characteristics"
+								>Характеристики</a
+							>
 						</li>
 						<li class="menu__item">
 							<a class="menu__link" href="#top-models"
-								>Другие ТОП модели
-							</a>
+								>Другие ТОП модели</a
+							>
 						</li>
 					</ul>
 				</nav>
@@ -98,5 +98,38 @@
 				</div>
 			</div>
 		</header>
+		<main class="main">
+			<section class="hero">
+				<div class="container hero__container">
+					<header class="hero__header">
+						<ul class="hero__benefits-list">
+							<li class="hero__benefits-item">стиль</li>
+							<li class="hero__benefits-item">cкорость</li>
+						</ul>
+						<h1 class="hero__title">
+							Nike <span class="hero__title-accent">air</span> mag
+						</h1>
+					</header>
+					<img
+						class="hero__img"
+						src="./images/nike-air-mag-1.png"
+						width="846"
+						height="713"
+						alt="Кроссовок Nike Air Mag с желтым кольцом под подошвой"
+					/>
+					<footer class="hero__footer">
+						<a class="hero__details" href="#">
+							Подробнее
+							<svg width="24" height="24">
+								<use
+									class="hero__details-icon"
+									href="./icons/main-sprite.svg#arrow-right"
+								></use>
+							</svg>
+						</a>
+					</footer>
+				</div>
+			</section>
+		</main>
 	</body>
 </html>

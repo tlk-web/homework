@@ -18,12 +18,12 @@
 	}
 }
 
-.air-mag__desprition {
+.air-mag__description {
 	display: flex;
 	gap: 13px;
 }
 
-.air-mag__desprition::before {
+.air-mag__description::before {
 	content: "";
 	display: block;
 	flex-shrink: 0;
@@ -34,13 +34,13 @@
 }
 
 @media (width > 768px) {
-	.air-mag__desprition {
+	.air-mag__description {
 		margin-bottom: 20px;
 	}
 }
 
 @media (width <= 768px) {
-	.air-mag__desprition {
+	.air-mag__description {
 		flex-direction: column;
 		margin-bottom: 15px;
 	}

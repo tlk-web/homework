@@ -1,0 +1,35 @@
+.header__container {
+  padding-top: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-right: 42px;
+}
+
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  padding-top: 6px;
+  font-family: var(--third-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 119%;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+}
+
+.header__language {
+  margin-right: 71px;
+  display: flex;
+  gap: 6px;
+}
+
+.header__language-list {
+  border: none;
+  background-color: var(--bg-color);
+  color: var(--main-text-color);
+}

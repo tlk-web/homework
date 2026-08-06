@@ -1,0 +1,51 @@
+.header__controls {
+  display: flex;
+  gap: 20px;
+}
+
+.button {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--main-text-color);
+  transition:
+    box-shadow var(--transition-time),
+    background var(--transition-time),
+    color var(--transition-time),
+    font-weight var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    color: var(--active-text-button);
+    background: linear-gradient(
+      87.05deg,
+      #dc6b30 17.98%,
+      #e4864f 49.63%,
+      #ffbe82 72.68%,
+      #e49031 93%
+    );
+    font-weight: 700;
+    box-shadow:
+      inset 0 -4px 0 0 #8f4119,
+      0 3px 49px -3px rgba(226, 128, 72, 0.76);
+  }
+}
+
+.button__primary {
+  padding-inline: 35px;
+}
+
+.button__secondary {
+  padding: 24px 35px;
+  border: 1px solid #fda919;
+  border-radius: 20px;
+  width: 234px;
+  height: 66px;
+}
+
+.button__tertiary {
+  padding: 21px 28px;
+  border: 1px solid #fda919;
+  border-radius: 20px;
+}

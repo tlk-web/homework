@@ -8,11 +8,18 @@
   --active-text-button: #000;
   --secondary-text-color: #eae9e9;
   --bg-color: #0e0e12;
+  --bg-menu-color: #1b1b1c;
 
   /* container */
   --container-width: 1575px;
   --container-padding: 15px;
 
   /* transitions */
-  --transition-time: 0.2s;
+  --transition-time: 0.3s;
+
+  /* layers */
+  --layer-0: 0;
+  --layer-1: 1;
+  --layer-2: 2;
+  --layer-3: 3;
 }

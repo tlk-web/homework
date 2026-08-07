@@ -1,0 +1,26 @@
+@media (width > 992px) {
+  .burger {
+    display: none;
+  }
+}
+
+@media (width <= 992px) {
+  .burger {
+    position: relative;
+    transform: translateY(6px);
+    margin-right: 10px;
+    width: 28px;
+    height: 28px;
+    z-index: var(--layer-3);
+  }
+
+  .burger__icon-menu,
+  .burger--open .burger__icon-cross {
+    display: block;
+  }
+
+  .burger__icon-cross,
+  .burger--open .burger__icon-menu {
+    display: none;
+  }
+}

@@ -9,19 +9,33 @@
       href="./icons/leader-favicon-32x32.ico"
       type="image/x-icon"
     />
+    <script defer src="./js/index.js" type="module"></script>
     <title>Leader Classic</title>
   </head>
   <body class="page__body">
     <header class="header">
       <div class="header__container container">
-        <a class="logo header__logo" href="#">
-          <img
-            class="logo__img"
-            src="./icons/logo.svg"
-            width="52"
-            height="66"
-            alt="Логотип Leader Classic"
-          />
+        <button
+          class="header__burger burger"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <svg width="28" height="28">
+            <use
+              class="burger__icon-menu"
+              href="./icons/sprite.svg#burger-menu"
+            ></use>
+            <use
+              class="burger__icon-cross"
+              href="./icons/sprite.svg#cross-menu"
+            ></use>
+          </svg>
+        </button>
+        <a class="logo header__logo" href="/">
+          <svg width="52" height="66">
+            <use class="logo__img" href="./icons/logo.svg"></use>
+          </svg>
           <div class="logo__text">
             <span class="logo__text-link">Leader</span>
             <span class="logo__text-link">Classic</span>
@@ -41,7 +55,7 @@
             <option value="zh">中文</option>
           </select>
         </div>
-        <nav class="menu">
+        <nav class="menu" id="menu" aria-label="Главное меню">
           <ul class="menu__list">
             <li class="menu__item">
               <a class="menu__item-link" href="#rates">Тарифы</a>

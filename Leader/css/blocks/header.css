@@ -1,13 +1,22 @@
 .header__container {
   padding-top: 30px;
+  padding-bottom: 23px;
   display: flex;
   align-items: center;
 }
 
 .logo {
   display: flex;
+  flex-shrink: 0;
   align-items: center;
-  margin-right: 42px;
+  /* min-width 1400px max-width 1920px */
+  margin-right: clamp(20px, -2.452rem + 4.23vw, 42px);
+}
+
+.logo__img {
+  /* min-width 768px max-width 1400px */
+  width: clamp(23px, -0.765rem + 4.59vw, 52px);
+  height: clamp(30px, -0.859rem + 5.7vw, 66px);
 }
 
 .logo__text {
@@ -23,9 +32,15 @@
 }
 
 .header__language {
-  margin-right: 71px;
+  margin-right: clamp(35px, -3.283rem + 8.82vw, 71px);
   display: flex;
   gap: 6px;
+}
+
+@media (width <=992px) {
+  .header__language {
+    display: none;
+  }
 }
 
 .header__language-list {

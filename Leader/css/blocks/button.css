@@ -1,6 +1,25 @@
 .header__controls {
   display: flex;
-  gap: 20px;
+  flex-shrink: 0;
+}
+
+@media (width > 992px) {
+  .header__controls {
+    gap: 20px;
+  }
+}
+
+@media (width <= 992px) {
+  .header__controls {
+    margin-left: auto;
+    gap: 8px;
+  }
+}
+
+@media (width <= 576px) {
+  .header__controls {
+    margin-left: 84px;
+  }
 }
 
 .button {
@@ -37,14 +56,15 @@
 
 .button__secondary {
   padding: 24px 35px;
+  padding-block: clamp(16px, -1.931rem + 3.92vw, 24px);
+  padding-inline: clamp(32px, -1.673rem + 4.41vw, 35px);
   border: 1px solid #fda919;
   border-radius: 20px;
-  width: 234px;
-  height: 66px;
 }
 
 .button__tertiary {
-  padding: 21px 28px;
+  padding-block: clamp(16px, -1.475rem + 3.19vw, 21px);
+  padding-inline: clamp(32px, -1.467rem + 3.68vw, 28px);
   border: 1px solid #fda919;
   border-radius: 20px;
 }

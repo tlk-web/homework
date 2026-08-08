@@ -91,6 +91,7 @@
 .top-stocks__phone {
   content: "";
   width: clamp(15.625rem, 6.917rem + 37.15vw, 51.5rem);
+  background-image: url(../../image/Wooden-Hand-iPhone.png);
   position: absolute;
   top: -15%;
   right: -6%;

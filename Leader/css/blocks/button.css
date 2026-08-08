@@ -1,5 +1,6 @@
 .header__controls {
   display: flex;
+  align-items: center;
 }
 
 @media (width > 992px) {
@@ -12,12 +13,6 @@
   .header__controls {
     margin-left: auto;
     gap: 8px;
-  }
-}
-
-@media (width <= 576px) {
-  .header__controls {
-    margin-left: 0px;
   }
 }
 
@@ -60,15 +55,42 @@
 }
 
 .button__secondary {
-  padding-block: clamp(16px, -1.931rem + 3.92vw, 24px);
-  padding-inline: clamp(12px, -1.673rem + 4.41vw, 35px);
+  border: 1px solid #fda919;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+@media (width > 576px) {
+  .button__secondary {
+    padding-block: 24px;
+    padding-inline: 35px;
+  }
+}
+
+@media (width <= 576px) {
+  .button__secondary {
+    /* min-width 375px max-width 576px */
+    padding-block: clamp(6px, -1.724rem + 8.96vw, 24px);
+    padding-inline: clamp(8px, -2.648rem + 13.43vw, 35px);
+  }
+}
+
+.button__tertiary {
   border: 1px solid #fda919;
   border-radius: 20px;
 }
 
-.button__tertiary {
-  padding-block: clamp(8px, -1.475rem + 3.19vw, 21px);
-  padding-inline: clamp(12px, -1.467rem + 3.68vw, 28px);
-  border: 1px solid #fda919;
-  border-radius: 20px;
+@media (width > 576px) {
+  .button__tertiary {
+    padding-block: 21px;
+    padding-inline: 28px;
+  }
+}
+
+@media (width <= 576px) {
+  .button__tertiary {
+    /* min-width 375px max-width 576px */
+    padding-block: clamp(6px, -1.374rem + 7.46vw, 21px);
+    padding-inline: clamp(8px, -1.832rem + 9.95vw, 28px);
+  }
 }

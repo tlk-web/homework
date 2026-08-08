@@ -17,9 +17,9 @@
 }
 
 .logo__img {
-  /* min-width 768px max-width 1400px */
-  width: clamp(23px, -0.765rem + 4.59vw, 52px);
-  height: clamp(30px, -0.859rem + 5.7vw, 66px);
+  width: 100%;
+  max-width: 52px;
+  height: auto;
 }
 
 .logo__text {

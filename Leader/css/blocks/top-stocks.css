@@ -1,0 +1,98 @@
+.top-stocks__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (width > 768px) {
+  .top-stocks__title {
+    max-width: 1003px;
+    margin-bottom: 13px;
+  }
+}
+
+@media (width <= 768px) {
+  .top-stocks__title {
+    margin-bottom: 8px;
+  }
+}
+
+.top-stocks__arrow {
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: -4%;
+}
+
+@media (width <=1400px) {
+  .top-stocks__arrow {
+    display: none;
+  }
+}
+
+.top-stocks__list {
+  padding-left: 19px;
+  font-size: clamp(12px, 0.477rem + 1.17vw, 30px);
+  list-style: disc;
+}
+
+@media (width > 768px) {
+  .top-stocks__list {
+    margin-bottom: 36px;
+  }
+}
+
+@media (width <= 768px) {
+  .top-stocks__list {
+    margin-bottom: 20px;
+  }
+}
+
+.top-stocks__buttons {
+  display: flex;
+  align-items: center;
+}
+
+@media (width > 768px) {
+  .top-stocks__buttons {
+    margin-bottom: 49px;
+    gap: 20px;
+  }
+}
+
+@media (width <= 768px) {
+  .top-stocks__buttons {
+    margin-bottom: 15px;
+    gap: 8px;
+  }
+}
+
+.top-stocks__users {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+@media (width <= 576px) {
+  .top-stocks__users {
+    gap: 8px;
+  }
+}
+
+.top-stocks__users-img {
+  width: clamp(61px, 2.432rem + 5.89vw, 152px);
+}
+
+.top-stocks__users-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.top-stocks__phone {
+  content: "";
+  width: clamp(15.625rem, 6.917rem + 37.15vw, 51.5rem);
+  position: absolute;
+  top: -15%;
+  right: -6%;
+  z-index: var(--layer-negative);
+}

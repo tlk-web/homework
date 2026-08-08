@@ -5,7 +5,7 @@
 
   /* colors */
   --main-text-color: #fff;
-  --active-text-button: #000;
+  --hover-text-button: #000;
   --secondary-text-color: #eae9e9;
   --bg-color: #0e0e12;
   --bg-menu-color: #1b1b1c;
@@ -19,6 +19,7 @@
   --transition-time: 0.3s;
 
   /* layers */
+  --layer-negative: -1;
   --layer-0: 0;
   --layer-1: 1;
   --layer-2: 2;

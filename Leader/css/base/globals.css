@@ -13,3 +13,75 @@
   width: min(var(--container-width), 100% - var(--container-padding) * 2);
   margin-inline: auto;
 }
+
+.title-text {
+  font-weight: 700;
+  /* min-width 375px max-width 1920px */
+  font-size: clamp(30px, 1.238rem + 2.72vw, 72px);
+  line-height: 117%;
+}
+
+.text-light {
+  font-weight: 300;
+  line-height: 159%;
+}
+
+.button {
+  border: 1px solid #fda919;
+  border-radius: 20px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: var(--main-text-color);
+
+  transition:
+    box-shadow var(--transition-time),
+    background var(--transition-time),
+    color var(--transition-time);
+}
+
+@media (width <= 576px) {
+  .button {
+    font-size: 12px;
+  }
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    color: var(--hover-text-button);
+    background: linear-gradient(
+      87.05deg,
+      #dc6b30 17.98%,
+      #e4864f 49.63%,
+      #ffbe82 72.68%,
+      #e49031 93%
+    );
+    font-weight: 700;
+    box-shadow:
+      inset 0 -4px 0 0 #8f4119,
+      0 3px 49px -3px rgba(226, 128, 72, 0.76);
+  }
+}
+
+.button:active {
+  background: linear-gradient(
+    87.05deg,
+    #b8531d 17.98%,
+    #cc6e36 49.63%,
+    #e6a567 72.68%,
+    #c97920 93%
+  );
+}
+
+.button__primary {
+  /* min-width 375px max-width 1920px */
+  font-size: clamp(12px, 0.598rem + 0.65vw, 22px);
+  width: clamp(109px, 2.762rem + 17.28vw, 376px);
+  height: clamp(31px, 0.8rem + 4.85vw, 106px);
+}
+
+@media (width <= 768px) {
+  .button__primary {
+    border-radius: 4px;
+  }
+}

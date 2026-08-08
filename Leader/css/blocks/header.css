@@ -16,10 +16,11 @@
   margin-right: clamp(20px, -2.452rem + 4.23vw, 42px);
 }
 
-.logo__img {
-  width: 100%;
-  max-width: 52px;
-  height: auto;
+@media (width <=576px) {
+  .logo__img {
+    width: 45px;
+    height: 45px;
+  }
 }
 
 .logo__text {
@@ -32,6 +33,12 @@
   line-height: 119%;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+}
+
+@media (width <=576px) {
+  .logo__text {
+    line-height: 89%;
+  }
 }
 
 .header__language {

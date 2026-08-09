@@ -6,13 +6,11 @@
   /* colors */
   --main-text-color: #fff;
   --hover-text-button: #000;
+  --percent-color: #4bd879;
   --secondary-text-color: #eae9e9;
   --bg-color: #0e0e12;
   --bg-menu-color: #1b1b1c;
   --bg-push-color: #1d1d21;
-
-  /* shadows */
-  --shadow: #9edfb6;
 
   /* container */
   --container-width: 1575px;

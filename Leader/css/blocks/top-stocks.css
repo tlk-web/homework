@@ -1,3 +1,7 @@
+.top-stocks {
+  margin-bottom: 70px;
+}
+
 .top-stocks__container {
   position: relative;
   display: flex;
@@ -89,13 +93,21 @@
 .top-stocks__users-text {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+@media (width <= 768px) {
+  .top-stocks__users-text {
+    font-size: 12px;
+  }
 }
 
 .top-stocks__phone {
-  width: clamp(15.625rem, 6.917rem + 37.15vw, 51.5rem);
+  max-width: 100%;
   position: absolute;
-  top: -15%;
-  right: -6%;
+  top: -27%;
+  right: -33%;
   z-index: var(--layer-negative);
 }
 
@@ -103,7 +115,28 @@
   .top-stocks__phone {
     position: static;
     display: block;
+    min-width: 375px;
     margin-left: auto;
-    transform: translateX(8%);
+    transform: translateX(14%);
+  }
+}
+
+.contracts {
+  position: relative;
+}
+
+.contracts::after {
+  content: "";
+  position: absolute;
+  top: -17%;
+  right: -6%;
+  width: 101px;
+  height: 103px;
+  background-image: url(../../icons/contracts.svg);
+}
+
+@media (width <= 1400px) {
+  .contracts::after {
+    display: none;
   }
 }

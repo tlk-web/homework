@@ -5,6 +5,7 @@
 }
 
 .page__body {
+  min-height: 200vw;
   min-width: 375px;
   background-color: var(--bg-color);
 }

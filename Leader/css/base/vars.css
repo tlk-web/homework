@@ -11,6 +11,9 @@
   --bg-menu-color: #1b1b1c;
   --bg-push-color: #1d1d21;
 
+  /* shadows */
+  --shadow: #9edfb6;
+
   /* container */
   --container-width: 1575px;
   --container-padding: 15px;

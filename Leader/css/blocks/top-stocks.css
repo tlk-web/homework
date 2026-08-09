@@ -99,3 +99,12 @@
   right: -6%;
   z-index: var(--layer-negative);
 }
+
+@media (width <=992px) {
+  .top-stocks__phone {
+    position: static;
+    display: block;
+    margin-left: auto;
+    transform: translateX(8%);
+  }
+}

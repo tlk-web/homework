@@ -20,6 +20,9 @@
 .top-stocks__arrow {
   content: "";
   position: absolute;
+  width: 42px;
+  height: 156px;
+  background-image: url(../../icons/arrow-down.svg);
   top: 42%;
   left: -4%;
 }

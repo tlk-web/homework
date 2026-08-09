@@ -125,8 +125,8 @@
           <div class="top-stocks__users">
             <img
               class="top-stocks__users-img"
-              width="608"
-              height="280"
+              width="152"
+              height="70"
               src="./image/users.png"
               alt="Картинки людей"
             />
@@ -135,13 +135,19 @@
               <span>100 000+ пользователей</span>
             </div>
           </div>
-          <img
-            class="top-stocks__phone"
-            src="./image/Wooden-Hand-iPhone.png"
-            width="824"
-            height="1441"
-            alt="Деревянная рука с Iphone"
-          />
+          <picture>
+            <source
+              srcset="./image/wooden-hand-iphone-mobile.png"
+              media="(max-width: 768px)"
+            />
+            <img
+              class="top-stocks__phone"
+              src="./image/wooden-hand-iphone.png"
+              width="824"
+              height="1441"
+              alt="Деревянная рука с Iphone"
+            />
+          </picture>
         </div>
       </section>
     </main>

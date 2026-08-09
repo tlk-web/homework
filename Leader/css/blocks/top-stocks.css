@@ -92,7 +92,6 @@
 }
 
 .top-stocks__phone {
-  content: "";
   width: clamp(15.625rem, 6.917rem + 37.15vw, 51.5rem);
   position: absolute;
   top: -15%;

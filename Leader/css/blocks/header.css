@@ -18,8 +18,7 @@
 
 @media (width <=576px) {
   .logo__img {
-    width: 45px;
-    height: 45px;
+    max-width: 45px;
   }
 }
 

@@ -76,4 +76,5 @@
   border-radius: 20px;
   background: #202020;
   padding: 25px 35px;
+  color: var(--main-text-color);
 }

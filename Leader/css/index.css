@@ -14,3 +14,9 @@
 @import "./blocks/investment-returns.css";
 @import "./blocks/instruments.css";
 @import "./blocks/intro-steps.css";
+@import "./blocks/bonus.css";
+@import "./blocks/features.css";
+@import "./blocks/portfolio-hero.css";
+@import "./blocks/investment-hero.css";
+@import "./blocks/faq.css";
+@import "./blocks/request.css";

@@ -1,0 +1,79 @@
+.request {
+  margin-bottom: 140px;
+}
+
+.request__title {
+  margin-bottom: 68px;
+  text-align: center;
+}
+
+.request__steps {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: clamp(20px, -0.419rem + 7.12vw, 130px);
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+}
+
+.step__icon {
+  position: relative;
+  margin-bottom: clamp(10px, 0.246rem + 1.62vw, 33px);
+}
+
+.step__icon::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 20px;
+  top: 70px;
+  left: 162px;
+  background-image: url(../../image/arrow-right.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (width <= 1400px) {
+  .step__icon::after {
+    display: none;
+  }
+}
+
+.step__title {
+  font-size: 35px;
+  line-height: 130%;
+  max-width: 377px;
+  margin-bottom: clamp(10px, 0.382rem + 1.04vw, 26px);
+}
+
+.step__text {
+  font-size: 22px;
+  line-height: 159%;
+  max-width: 340px;
+}
+
+.request__form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(377px, 1fr));
+  gap: 20px;
+}
+
+@media (width <= 768px) {
+  .request__form {
+    display: grid;
+    justify-items: center;
+    gap: 15px;
+  }
+}
+
+.request__input {
+  font-size: 15px;
+  border: 4px solid rgba(255, 255, 255, 0.29);
+  border-radius: 20px;
+  background: #202020;
+  padding: 25px 35px;
+}

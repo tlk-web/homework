@@ -1,0 +1,27 @@
+.page {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+.page__body {
+  min-width: 375px;
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: min(var(--container-width), 100% - var(--container-padding) * 2);
+  margin-inline: auto;
+}
+
+.title-text {
+  font-weight: 700;
+  /* min-width 375px max-width 1920px */
+  font-size: clamp(30px, 1.238rem + 2.72vw, 72px);
+  line-height: 117%;
+}
+
+.text-light {
+  font-weight: 300;
+  line-height: 159%;
+}

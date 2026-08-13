@@ -1,0 +1,88 @@
+@media (width > 992px) {
+  .menu {
+    flex-grow: 1;
+  }
+}
+
+@media (width <=1400px) {
+  .menu {
+    margin-right: 10px;
+  }
+}
+
+@media (width <=992px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100vh;
+    bottom: 0;
+    z-index: var(--layer-2);
+    min-width: 378px;
+    padding-top: 160px;
+    padding-left: 15px;
+    background-color: var(--bg-menu-color);
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      left var(--transition-time),
+      opacity var(--transition-time),
+      visibility var(--transition-time);
+  }
+
+  .menu--open {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .menu__list {
+    flex-direction: column;
+  }
+}
+
+.menu__list {
+  display: flex;
+  /* min-width 1400px max-width 992px */
+  gap: clamp(25px, -10.216rem + 13.46vw, 95px);
+}
+
+.menu__item-link {
+  position: relative;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  background: radial-gradient(
+    112.45% 3992.22% at 8.04% 17.65%,
+    #e7aa19 0%,
+    #cb6d9c 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: var(--main-text-color);
+  transition: var(--transition-time);
+}
+
+@media (any-hover: hover) {
+  .menu__item-link::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background-image: url(../../image/star-icon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0;
+    right: -28px;
+    transition: opacity var(--transition-time);
+  }
+}
+
+@media (any-hover: hover) {
+  .menu__item-link:hover {
+    color: #0000;
+  }
+
+  .menu__item-link:hover::after {
+    opacity: 1;
+  }
+}

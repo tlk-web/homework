@@ -1,0 +1,147 @@
+.header__controls {
+  display: flex;
+  align-items: center;
+}
+
+@media (width > 992px) {
+  .header__controls {
+    gap: 20px;
+  }
+}
+
+@media (width <= 992px) {
+  .header__controls {
+    margin-left: auto;
+    gap: 8px;
+  }
+}
+
+.button__main {
+  font-size: clamp(0.75rem, 0.555rem + 0.83vw, 1.375rem);
+  padding-block: clamp(0.813rem, 0.383rem + 1.83vw, 2.188rem);
+  white-space: nowrap;
+  color: var(--main-text-color);
+  transition:
+    box-shadow var(--transition-time),
+    background var(--transition-time),
+    color var(--transition-time);
+}
+
+@media (width > 576px) {
+  .button__main {
+    border: 4px solid #fda919;
+    border-radius: 20px;
+  }
+}
+
+@media (width <= 576px) {
+  .button__main {
+    border: 1px solid #fda919;
+    border-radius: 4px;
+  }
+}
+
+@media (any-hover: hover) {
+  .button__main:hover,
+  .button__login:hover,
+  .button__check:hover {
+    border: none;
+    color: var(--hover-text-button);
+    background: linear-gradient(
+      87.05deg,
+      #dc6b30 17.98%,
+      #e4864f 49.63%,
+      #ffbe82 72.68%,
+      #e49031 93%
+    );
+    font-weight: 700;
+    box-shadow:
+      inset 0 -4px 0 0 #8f4119,
+      0 3px 49px -3px rgba(226, 128, 72, 0.76);
+  }
+}
+
+.button__main:active {
+  background: linear-gradient(
+    87.05deg,
+    #b8531d 17.98%,
+    #cc6e36 49.63%,
+    #e6a567 72.68%,
+    #c97920 93%
+  );
+}
+
+.button__login {
+  border: 1px solid #fda919;
+  border-radius: 20px;
+  padding-block: clamp(0.5rem, 0.246rem + 1.08vw, 1.313rem);
+  padding-inline: clamp(0.813rem, 0.52rem + 1.25vw, 1.75rem);
+  font-size: clamp(0.75rem, 0.633rem + 0.5vw, 1.125rem);
+  color: var(--main-text-color);
+}
+
+.button__check {
+  border: 1px solid #fda919;
+  border-radius: 20px;
+  padding-block: clamp(0.5rem, 0.188rem + 1.33vw, 1.5rem);
+  padding-inline: clamp(0.938rem, 0.234rem + 3vw, 3.188rem);
+  font-size: clamp(0.75rem, 0.633rem + 0.5vw, 1.125rem);
+  color: var(--main-text-color);
+}
+
+@media (width <= 576px) {
+  .button__login,
+  .button__check {
+    border-radius: 4px;
+  }
+}
+
+.button__login:active,
+.button__check:active {
+  background: linear-gradient(
+    87.05deg,
+    #b8531d 17.98%,
+    #cc6e36 49.63%,
+    #e6a567 72.68%,
+    #c97920 93%
+  );
+}
+
+.top-stocks__button-one {
+  padding-inline: clamp(0.375rem, -0.758rem + 4.83vw, 4rem);
+}
+
+.top-stocks__button-two {
+  padding-inline: clamp(1.875rem, 0.352rem + 6.5vw, 6.75rem);
+}
+
+.investment-returns__button {
+  padding-inline: clamp(1.063rem, -0.266rem + 5.67vw, 5.313rem);
+}
+
+.bonus__button-one {
+  padding-inline: clamp(1.375rem, -0.031rem + 6vw, 5.875rem);
+}
+
+.bonus__button-two {
+  padding-inline: clamp(0.75rem, -0.5rem + 5.33vw, 4.75rem);
+}
+.portfolio-hero__promo .portfolio-hero__button {
+  align-self: flex-start;
+  padding-inline: clamp(0.625rem, -0.742rem + 5.83vw, 5rem);
+}
+
+.faq__action-button {
+  padding-inline: clamp(0.375rem, -0.426rem + 3.42vw, 2.938rem);
+}
+
+.request__button {
+  width: max-content;
+  box-sizing: border-box;
+  padding-inline: clamp(1.313rem, -0.055rem + 5.83vw, 5.688rem);
+}
+
+.footer__button {
+  padding-block: clamp(0.5rem, 0.305rem + 0.83vw, 1.125rem);
+  padding-inline: clamp(1.125rem, 0.793rem + 1.42vw, 2.188rem);
+}

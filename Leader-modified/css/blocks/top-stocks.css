@@ -1,5 +1,6 @@
 .top-stocks {
   margin-bottom: 70px;
+  overflow-x: clip;
 }
 
 .top-stocks__container {
@@ -115,9 +116,10 @@
   .top-stocks__phone {
     position: static;
     display: block;
-    min-width: 375px;
+    width: 100%;
+    max-width: 375px;
     margin-left: auto;
-    transform: translateX(14%);
+    margin-right: auto;
   }
 }
 

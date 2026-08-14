@@ -1,5 +1,6 @@
 .bonus {
   margin-bottom: 230px;
+  overflow-x: clip;
 }
 
 .bonus__container {

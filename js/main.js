@@ -1,77 +1,70 @@
 // Задача 1.
-// Напишите функцию calculateFinalPrice, которая принимает базовую цену товара, процент скидки и налоговую ставку. Функция должна вычислять скидку, затем прибавлять налог и возвращать итоговую цену.
+// Создайте объект person с несколькими свойствами, содержащими информацию о вас. Затем выведите значения этих свойств в консоль.
 
-// let sum = +prompt("Введите сумму");
+// const person = {
+//   age: "25",
+//   city: "Rostovondon",
+//   gender: "man",
+// };
 
-// function calculateFinalPrice(price, discount, tax) {
-//   let discountPrice = (price * discount) / 100;
-//   let priceSum = price - discountPrice;
-//   let taxPrice = priceSum * tax;
-//   return taxPrice + priceSum;
-// }
-
-// alert(
-//   "Ваша итоговая сумма заказа с учетом налога " +
-//     calculateFinalPrice(sum, 10, 0.2) +
-//     " ₽",
-// );
+// const { city, age, gender } = person;
+// console.log(gender, age, city);
+// или;
+// console.log(person["age"], person["city"], person["gender"]);
 
 // Задача 2.
-// Напишите функцию checkAccess, которая принимает имя пользователя и пароль. Если имя пользователя равно "admin" и пароль равен "123456", функция должна возвращать строку "Доступ разрешен", иначе — "Доступ запрещен".
-// let userLogin = prompt("Введите логин");
-// let userPassword = prompt("Введите пароль только цифры");
+// Создайте функцию isEmpty, которая проверяет является ли переданный объект пустым. Если объект пуст - верните true, в противном случае false.
 
-// function checkAccess(login, password) {
-//   //Я решил сделать password строчным как в условии задачи хотя думал написать +prompt
-//   if (login === "admin" && password === "123456") {
-//     return "Доступ разрешён";
-//   } else {
-//     return "Доступ запрещён";
+// const trueFalse = {};
+
+// function isEmpty() {
+//   for (let key in trueFalse) {
+//     return false;
 //   }
+//   return true;
 // }
 
-// alert(checkAccess(userLogin, userPassword));
+// console.log(isEmpty());
 
 // Задача 3.
-// Напишите функцию getTimeOfDay, которая принимает текущее время (число от 0 до 23) и возвращает строку:
-// "Ночь" (с 0 до 5 часов),
-// "Утро" (с 6 до 11 часов),
-// "День" (с 12 до 17 часов),
-// "Вечер" (с 18 до 23 часов).
-// Если введённое значение не попадает в этот диапазон, возвращайте `"Некорректное время"`.
+// Создайте объект task с несколькими свойствами: title, description, isCompleted.
+// Напишите функцию cloneAndModify(object, modifications), которая с помощью оператора spread создает копию объекта и применяет изменения из объекта modifications.
+// Затем с помощью цикла for in выведите все свойства полученного объекта.
 
-// let userInputTime = +prompt("Введите текущее время в часах (от 0 до 23):");
+// const task = {
+//   title: "Привет",
+//   description: "text - text",
+//   isCompleted: false,
+// };
 
-// function getTimeOfDay(timeClock) {
-//   if (timeClock >= 0 && timeClock <= 5) {
-//     return "Ночь";
-//   } else if (timeClock >= 6 && timeClock <= 11) {
-//     return "Утро";
-//   } else if (timeClock >= 12 && timeClock <= 17) {
-//     return "День";
-//   } else if (timeClock >= 18 && timeClock <= 23) {
-//     return "Вечер";
-//   } else {
-//     return "Некорректное время";
-//   }
+// function cloneAndModify(object, modifications) {
+//   return { ...object, ...modifications };
 // }
 
-// alert("Время суток " + getTimeOfDay(userInputTime) + ", отдыхайте");
+// // Я как понял здесь мы сокращаем всей этой процедуры через переменную
+// const updateTask = cloneAndModify(task, { isCompleted: true, title: "Готово" });
+
+// // И вот конечная переменная с изменением modifications чтобы оставить только значения ключей можно убрать вложенность (key, updatetask[key]) > console.log(updateTaskp[key])
+// for (const key in task) {
+//   console.log(key, updateTask[key]);
+// }
 
 // Задача 4.
-// Напишите функцию findFirstEven, которая принимает два числа start и end и находит первое чётное число в указанном диапазоне.
-// Если чётного числа в этом диапазоне нет, функция должна вернуть "Чётных чисел нет".
+// Создайте функцию callAllMethods, которая принимает объект и вызывает все его методы.
+function callAllMethods(obj) {
+  for (const key in obj) {
+    obj[key]();
+  }
+}
 
-// let numberStart = +prompt("Введите число от которого начнём");
-// let numberEnd = +prompt("Введите число до которого закончим(включительно)");
+const myObject = {
+  method1() {
+    console.log("Метод 1 вызван");
+  },
+  method2() {
+    console.log("Метод 2 вызван");
+  },
+};
 
-// function findFirstEven(numberOne, numberTwo) {
-//   for (let i = numberOne; i <= numberTwo; i++) {
-//     if (i % 2 === 0 && i > 0) {
-//       return `Число ${i} чётное`;
-//     }
-//   }
-//   return `Чётных чисел нет`;
-// }
-
-// console.log(findFirstEven(numberStart, numberEnd));
+// Че за фигня как он показывать начал хахахахаха без консоль лог
+callAllMethods(myObject);

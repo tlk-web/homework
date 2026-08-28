@@ -1,70 +1,81 @@
-// Задача 1.
-// Создайте объект person с несколькими свойствами, содержащими информацию о вас. Затем выведите значения этих свойств в консоль.
+// Задание 1.
+// Дан массив пользователей:
+// const users = [
+//   { name: 'Alex', age: 24, isAdmin: false },
+//   { name: 'Bob', age: 13, isAdmin: false },
+//   { name: 'John', age: 31, isAdmin: true },
+//   { name: 'Jane', age: 20, isAdmin: false },
+//]
+// Добавьте в конец массива двух пользователей:
+// { name: 'Ann', age: 19, isAdmin: false },
+// { name: 'Jack', age: 43, isAdmin: true }
 
-// const person = {
-//   age: "25",
-//   city: "Rostovondon",
-//   gender: "man",
-// };
+const users = [
+  { name: "Alex", age: 24, isAdmin: false },
+  { name: "Bob", age: 13, isAdmin: false },
+  { name: "John", age: 31, isAdmin: true },
+  { name: "Jane", age: 20, isAdmin: false },
+];
 
-// const { city, age, gender } = person;
-// console.log(gender, age, city);
-// или;
-// console.log(person["age"], person["city"], person["gender"]);
+users.push(
+  { name: "Ann", age: 19, isAdmin: false },
+  { name: "Jack", age: 43, isAdmin: true },
+);
 
-// Задача 2.
-// Создайте функцию isEmpty, которая проверяет является ли переданный объект пустым. Если объект пуст - верните true, в противном случае false.
+// Задание 2.
+// Используя массив пользователей users из предыдущего задания, напишите функцию getUserAverageAge(users), которая возвращает средний возраст пользователей.
 
-// function isEmpty(obj) {
-//   for (let key in obj) {
-//     return false;
-//   }
-//   return true;
+// function getUserAverageAge(users) {
+//   let sum = 0;
+//   users.forEach(function (user) {
+//     sum += user.age;
+//   });
+
+//   const middleAge = sum / users.length;
+
+//   return middleAge;
 // }
 
-// console.log(isEmpty({})); // true
-// console.log(isEmpty({ a: 1 })); // false
+// console.log(getUserAverageAge(users));
 
-// Задача 3.
-// Создайте объект task с несколькими свойствами: title, description, isCompleted.
-// Напишите функцию cloneAndModify(object, modifications), которая с помощью оператора spread создает копию объекта и применяет изменения из объекта modifications.
-// Затем с помощью цикла for in выведите все свойства полученного объекта.
+// Задание 3.
+// Используя массив пользователей users из предыдущего задания, напишите функцию getAllAdmins(users), которая возвращает массив всех администраторов.
 
-// const task = {
-//   title: "Привет",
-//   description: "text - text",
-//   isCompleted: false,
-// };
+function getAllAdmins(users) {
+  const adminUsers = [];
 
-// function cloneAndModify(object, modifications) {
-//   return { ...object, ...modifications };
-// }
+  users.forEach(function (user) {
+    if (user.isAdmin === true) {
+      adminUsers.push(user);
+    }
+  });
 
-// // Я как понял здесь мы сокращаем всей этой процедуры через переменную
-// const updateTask = cloneAndModify(task, { isCompleted: true, title: "Готово" });
+  return adminUsers;
+}
 
-// // И вот конечная переменная с изменением modifications чтобы оставить только значения ключей можно убрать вложенность (key, updatetask[key]) > console.log(updateTaskp[key])
-// for (const key in updateTask) {
-//   console.log(key, updateTask[key]);
-// }
+console.log(getAllAdmins(users));
 
-// Задача 4.
-// Создайте функцию callAllMethods, которая принимает объект и вызывает все его методы.
-// function callAllMethods(obj) {
-//   for (const key in obj) {
-//     if (typeof obj[key] === "function") {
-//       obj[key]();
-//     }
-//   }
-// }
+// Задание 4.
+// Напишите функцию first(arr, n), которая возвращает первые n элементов массива. Если n == 0, возвращается пустой массив [], если n == undefined, то возвращается массив с первым элементом.
 
-// const myObject = {
-//   method1() {
-//     console.log("Метод 1 вызван");
-//   },
-//   method2() {
-//     console.log("Метод 2 вызван");
-//   },
-// };
+const number = [1, 2, 3, 4, 5, 6];
 
-// callAllMethods(myObject);
+const string = ["apple", "orange", "strawberry", "banana", "potato", "tomato"];
+
+function first(arr, n) {
+  let newMas = [];
+
+  if (n == 0) {
+    return newMas;
+  } else if (n == undefined) {
+    newMas.push(arr[0]);
+  } else {
+    for (i = 0; i < n; i++) {
+      newMas.push(arr[i]);
+    }
+  }
+
+  return newMas;
+}
+
+console.log(first(string));

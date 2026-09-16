@@ -14,12 +14,12 @@
     z-index: var(--layer-3);
   }
 
-  .burger__icon-menu,
+  .burger__icon-menu, /* По умолчанию */
   .burger--open .burger__icon-cross {
     display: block;
   }
 
-  .burger__icon-cross,
+  .burger__icon-cross, /* По умолчанию */
   .burger--open .burger__icon-menu {
     display: none;
   }

@@ -70,6 +70,10 @@
   );
 }
 
+.widget__range {
+  accent-color: #61bb75;
+}
+
 .widget__options {
   display: flex;
   flex-direction: column;
@@ -77,7 +81,33 @@
 
 .widget__options-button {
   display: flex;
+  align-items: center;
   gap: 10px;
+  cursor: pointer;
+}
+
+.widget__options-radio {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  width: clamp(24px, 0.8rem + 1.5vw, 34px);
+  height: clamp(24px, 0.8rem + 1.5vw, 34px);
+  border-radius: 50%;
+  border: 2px solid #65ca7c; /* невыбранное состояние — тонкое кольцо */
+  background: transparent;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.widget__options-radio:checked {
+  border: none;
+  background: radial-gradient(
+    closest-side,
+    transparent 0%,
+    transparent 35%,
+    #4a7a5a 60%,
+    #65ca7c 100%
+  );
 }
 
 .widget__options-text {
@@ -128,4 +158,9 @@
   font-size: 26px;
   line-height: 125%;
   text-align: center;
+}
+
+.widget__gauge-img {
+  position: relative;
+  z-index: -1;
 }

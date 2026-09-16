@@ -45,7 +45,7 @@
   .button__main:hover,
   .button__login:hover,
   .button__check:hover {
-    border: none;
+    border: 4px solid transparent;
     color: var(--hover-text-button);
     background: linear-gradient(
       87.05deg,

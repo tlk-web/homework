@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="icon" href="./icons/leader-favicon-32x32.ico" type="image/x-icon" />
-    <script defer src="./js/index.js" type="module"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/index.js" type="module"></script>
     <title>Leader Classic</title>
   </head>
   <body class="page__body">
@@ -86,6 +87,7 @@
             Откройте счет, инвестируйте в фонды Leader Classic и получите шанс выиграть
             один из 100 000 000
           </p>
+          <span id="t"></span>
         </div>
       </div>
     </section>
@@ -573,24 +575,41 @@
           <div class="portfolio-hero__wrapper">
             <div class="portfolio-hero__widget widget">
               <div class="widget__gauge">
-                <img
-                  class="widget__gauge-img"
-                  src="./icons/widget.svg"
-                  width="958"
-                  height="958"
-                  alt="Виджет"
-                />
+                <svg class="gauge" width="690" height="345" viewBox="0 0 690 345">
+                  <path
+                    d="M 40,325 A 305,305 0 0 1 650,325"
+                    fill="none"
+                    stroke="#303030"
+                    stroke-width="40"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    id="arc"
+                    d="M 40,325 A 305,305 0 0 1 650,325"
+                    fill="none"
+                    stroke="url(#greenGrad)"
+                    stroke-width="40"
+                    stroke-linecap="round"
+                  />
+                  <defs>
+                    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#405548" />
+                      <stop offset="100%" stop-color="#6ADB83" />
+                    </linearGradient>
+                  </defs>
+                </svg>
                 <div class="widget__wrapper">
-                  <p class="widget__text">Доходность</p>
-                  <h3 class="widget__title">до 5%</h3>
-                  <p class="widget__risk">Низкий риск</p>
+                  <p class="widget__label">Доходность</p>
+                  <p class="widget__percent" id="percent">до 5%</p>
+                  <span class="widget__risk" id="badge">Низкий риск</span>
                   <input
                     class="widget__range"
-                    id="range"
+                    id="slider"
                     type="range"
                     min="0"
                     max="100"
-                    value="50"
+                    value="30"
+                    step="1"
                   />
                 </div>
               </div>
@@ -610,7 +629,6 @@
                 <label class="widget__options-button">
                   <input
                     class="widget__options-radio"
-                    в
                     type="radio"
                     id="manageExpert"
                     name="moneyManagement"
@@ -795,14 +813,16 @@
             />
             <input
               class="request__input"
+              id="phone"
               type="tel"
               name="tel"
-              placeholder="+7 --- --- -- --"
+              placeholder="+7(___)___-__-__"
               title="Номер телефона"
               required
             />
             <input
               class="request__input"
+              id="email"
               type="email"
               name="email"
               placeholder="Email:"

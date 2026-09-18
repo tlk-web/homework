@@ -1,0 +1,50 @@
+.instruments {
+  margin-bottom: 139px;
+}
+
+.instruments__title {
+  text-align: center;
+  margin-bottom: 93px;
+}
+
+.instruments__panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  padding-block: 255px;
+  padding-inline: 25px;
+  background-color: var(--main-text-color);
+  color: var(--hover-text-button);
+}
+
+@media (width <= 992px) {
+  .instruments__panel {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (width <= 576px) {
+  .instruments__panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+.instruments__card {
+  display: grid;
+  gap: 18px;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
+}
+
+.instruments__card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.instruments__card-header-img {
+  padding: 8px;
+  border: 3px solid var(--hover-text-button);
+  border-radius: 10px;
+}

@@ -1,0 +1,120 @@
+.faq {
+  margin-bottom: 140px;
+}
+
+.faq__container {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 80px;
+}
+
+@media (width <= 576px) {
+  .faq__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.faq__action {
+  max-width: 440px;
+}
+
+@media (width <= 576px) {
+  .faq__action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.faq__action-title {
+  margin-bottom: 20px;
+}
+
+.faq__action-text {
+  max-width: 400px;
+  margin-bottom: 480px;
+  font-size: clamp(12px, -0.766rem + 6.47vw, 25px);
+}
+
+@media (width <= 576px) {
+  .faq__action-text {
+    margin-bottom: 100px;
+  }
+}
+
+.faq__info-title {
+  position: relative;
+  min-width: 330px;
+  font-size: clamp(12px, 0.325rem + 1.81vw, 40px);
+  line-height: 117%;
+  list-style: none;
+  cursor: pointer;
+}
+
+.faq__info-title::before {
+  content: "?";
+  position: absolute;
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  aspect-ratio: 1;
+  left: -15%;
+  background-color: #24242d;
+  border-radius: 100%;
+  font-weight: 500;
+  color: var(--main-text-color);
+  transition: var(--transition-time);
+  transition: all var(--transition-time);
+}
+
+@media (width <= 576px) {
+  .faq__info-title::before {
+    display: none;
+  }
+}
+
+.faq__info-title:hover::before {
+  background: linear-gradient(149.53deg, #6ba758 21.14%, #23503d 81.17%);
+}
+
+details[open] .faq__info-title::before {
+  background: linear-gradient(149.53deg, #6ba758 21.14%, #23503d 81.17%);
+  transform: rotate(180deg);
+}
+
+.faq__info-title::after {
+  content: "";
+  position: absolute;
+  width: 48px;
+  aspect-ratio: 1;
+  right: -15%;
+  stroke: #24242d;
+  background: url(../../icons/faq-arrow-dark.svg);
+  transition: all var(--transition-time);
+}
+
+@media (width <= 576px) {
+  .faq__info-title::after {
+    width: 32px;
+  }
+}
+
+.faq__info-title:hover::after {
+  width: 48px;
+  background: url(../../icons/faq-arrow-light.svg);
+}
+
+details[open] .faq__info-title:hover::after {
+  background: url(../../icons/faq-arrow-light.svg);
+  transform: rotate(180deg);
+}
+
+.faq__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 80px;
+}

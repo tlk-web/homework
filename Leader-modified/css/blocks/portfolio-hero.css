@@ -35,8 +35,14 @@
   bottom: 0px;
   transform: translateX(-50%);
   max-width: 412px;
-  width: 90%;
+  width: clamp(16.875rem, 6.09rem + 22.47vw, 25.75rem);
   text-align: center;
+}
+
+@media (width <= 768px) {
+  .widget__wrapper {
+    width: 100%;
+  }
 }
 
 .widget__label {

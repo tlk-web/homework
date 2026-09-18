@@ -21,8 +21,8 @@ export function initTimer() {
       today + " дней " + thour + " часов " + tmin + " минут " + tsec + " секунд";
     document.getElementById("t").innerHTML = timestr;
 
-    window.setTimeout(time, 1000); // передаём функцию, не строку
+    window.setTimeout(time, 1000);
   }
 
-  time(); // ← вот этого не хватало — первый запуск
+  time();
 }
